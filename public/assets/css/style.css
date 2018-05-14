@@ -1,0 +1,39 @@
+#burger-logo{
+    width: 11%;
+    height: 60%;
+    position: relative;
+    left: 45%;
+}
+
+h1 {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #a6f39f;
+    color: #853000;
+}
+ul{
+
+}
+
+.item {
+    background-color: white;
+    border: inset 2px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    
+}
+.list {
+    background-color: white;
+    border: inset 2px;
+}
+
+#devour-it{
+    font-size: 12px;
+    margin-left: -15px;
+}
+
+

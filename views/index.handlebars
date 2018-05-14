@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="row">
+    <div class="col-md-8">
+             <h3>Burgers to Oot:</h3>
+       <ul>
+        {{#each burger}}
+        {{#unless devoured}}
+        <div class="row" id="toEat">
+            <div class="col-md-8">
+        <li class="item">
+            {{burger}}    
+        </li>
+        </div>
+        <div class="col-md-4">
+        <form class="form-group" method="POST" name="id" action="/api/burgers/{{this.id}}" enctype="application/x-www-form-urlencoded">
+            <input type="hidden" class="devoured" data-id="{{this.id}}" method="PUT" name="devoured" value="1">
+            <button id="devour-it" type="submit">DEVOUR IT!</button>
+        </form>
+        </div>
+        </div>
+        {{/unless}}
+        {{/each}}
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h3>Burgers Ooten:</h3>
+        <ul class="list">
+        {{#each burger}}
+        {{#if devoured}}
+        <li>
+	{{burger}}
+
+        </li>
+        {{/if}}
+        {{/each}}
+        </ul>
+    </div>
+
+</div>
+</div>
+</div>
+<div class="row">    
+            <div class="col-md-4 col-md-offset-4">
+                <h4>Enter the name of a burger you'd like to oot:</h4>
+                <form class="form-group center-block" method="POST" action="/api/burgers">
+                <textarea class="form-control" id="input" name="burger"></textarea>
+                <br>
+                <input type="submit" for="input" class="btn btn-success center-block"></input>
+                </form>
+            </div>    
+        </div>
